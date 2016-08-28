@@ -7,6 +7,7 @@ body {
 }
 
 #landing-page {
+    background-color: #000;
     background-image: url("/img/space_min.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -70,6 +71,12 @@ body {
 .inline-nav-list-item a:hover {
     color: #EB3B3B;
     transition: color 0.2s linear;
+}
+.inline-nav--fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 #about-page {

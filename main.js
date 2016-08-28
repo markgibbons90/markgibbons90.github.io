@@ -1,32 +1,44 @@
 (function() {
 
+    // On page load, resize the landing page to be the full window height.
     resizeLandingPage();
 
-    window.onresize = resizeLandingPage;
+    // Resize landing page when the window size changes.
+    window.addEventListener('resize', resizeLandingPage);
 
     /**
-     * Re-size landing page to be height of window
+     * Re-size landing page to be height of window.
      */
     function resizeLandingPage() {
         var windowHeight = window.innerHeight;
         document.getElementById('landing-page').style.height = windowHeight;
-    }
+    };
 
-    var height = window.innerHeight;
-    var nav = document.getElementById('main-nav');
-    // TODO: refactor this
-    window.addEventListener('scroll', function() {
+    // Fix the nav to the top of the page when you scroll past it.
+    window.addEventListener('scroll', fixMainNavOnScroll);
+
+    // The main nav.
+    var mainNav = document.getElementById('main-nav');
+
+    /**
+     * Called on scroll
+     */
+    function fixMainNavOnScroll() {
+        fixedNav(mainNav);
+    };
+
+    /**
+     * Fix the nav to the top of the page when you scroll past it.
+     * @param  {DOM Element} nav
+     *   The navigation element 
+     */
+    function fixedNav(nav) {
+        var height = window.innerHeight;
         if (window.scrollY > height) {
-            nav.style.position = 'fixed';
-            nav.style.top = 0;
-            nav.style.left = 0;
-            nav.style.right = 0;
+            nav.classList.add('inline-nav--fixed-top');
         } else {
-            nav.style.position = 'initial';
-            delete nav.style.top;
-            delete nav.style.left;
-            delete nav.style.right;
+            nav.classList.remove('inline-nav--fixed-top');
         }
-    });
+    };
 
 })();
