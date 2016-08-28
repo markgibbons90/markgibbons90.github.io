@@ -10,8 +10,12 @@
      * Re-size landing page to be height of window.
      */
     function resizeLandingPage() {
-        var windowHeight = window.innerHeight;
-        document.getElementById('landing-page').style.height = windowHeight;
+        // Only do this if you are at the top of the page.
+        // This should prevent weird jumping due to URL bars on mobile devices.
+        if (window.scrollY === 0) {
+            var windowHeight = window.innerHeight;
+            document.getElementById('landing-page').style.height = windowHeight;
+        }
     };
 
     // Fix the nav to the top of the page when you scroll past it.
@@ -30,7 +34,7 @@
     /**
      * Fix the nav to the top of the page when you scroll past it.
      * @param  {DOM Element} nav
-     *   The navigation element 
+     *   The navigation element
      */
     function fixedNav(nav) {
         var height = window.innerHeight;
