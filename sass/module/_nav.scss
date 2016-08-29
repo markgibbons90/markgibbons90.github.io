@@ -1,29 +1,59 @@
 $nav-height: 50px;
 $nav-height-mobile: 100px;
 
+// The nav
 .nav {
     background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $nav-height;
+    // On mobile
+    @media screen and (max-width: 768px) {
+        height: $nav-height-mobile;
+    }
 }
+
+// The home link in the nav
 .nav__home-link {
     display: inline-block;
     height: $nav-height;
     padding: 15px;
-    color: #eee;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
     line-height: 20px;
     margin-right: 20px;
+    @media screen and (max-width: 768px) {
+        height: 100px;
+        line-height: 50px;
+        padding: 25px;
+    }
 }
+
+// The list of menu links
 .nav__list {
     display: inline-block;
     margin: 0;
     padding: 0;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
+
+// An item in the list
 .nav__list-item {
     display: inline-block;
     list-style: none;
+    @media screen and (max-width: 768px) {
+        display: block;
+        background: #000;
+    }
 }
+
+// Item link
 .nav__list-item a {
     display: block;
     height: 50px;
@@ -37,10 +67,40 @@ $nav-height-mobile: 100px;
         // border-bottom: 5px solid #fff;
         // padding-bottom: 10px;
     }
+    @media screen and (max-width: 768px) {
+        height: auto;
+        padding: 25px;
+        &:hover, &:focus, &:active {
+            background: #fff;
+            color: #000;
+        }
+    }
 }
+
+// Fix the nav to the top of the page
 .nav--fixed-top {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+}
+
+/**
+ * Mobile off-canvas nav
+ */
+
+// The ever-present hamburger
+.hamburger__icon {
+    font-size: 2rem;
+    color: #fff;
+    height: 100px;
+    line-height: 50px;
+    padding: 25px;
+    cursor: pointer;
+}
+
+#off-canvas-toggle:checked {
+    ~ .nav__list {
+        display: block;
+    }
 }

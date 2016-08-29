@@ -7,9 +7,15 @@
 }
 
 .about-section {
-    // height: 800px;
     padding: 2rem 0;
+    padding-top: calc(2rem + 50px);
     background: #2BBF9B;
     color: #fff;
     font-size: 1.5rem;
+}
+
+.projects-section {
+    padding: 2rem 0;
+    background: #ccc;
+    height: 1000px;
 }

@@ -14,6 +14,28 @@ html {
     html {
       font-size: 32px; } }
 
+/**
+ * Links
+ */
+a {
+  color: inherit; }
+
+.mobile-only {
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .mobile-only {
+      display: initial; } }
+
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none; } }
+
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
 .container {
   max-width: 1200px;
   margin-left: auto;
@@ -25,27 +47,47 @@ html {
     display: block; }
 
 .nav {
-  background: #000; }
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px; }
+  @media screen and (max-width: 768px) {
+    .nav {
+      height: 100px; } }
 
 .nav__home-link {
   display: inline-block;
   height: 50px;
   padding: 15px;
-  color: #eee;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
   line-height: 20px;
   margin-right: 20px; }
+  @media screen and (max-width: 768px) {
+    .nav__home-link {
+      height: 100px;
+      line-height: 50px;
+      padding: 25px; } }
 
 .nav__list {
   display: inline-block;
   margin: 0;
   padding: 0; }
+  @media screen and (max-width: 768px) {
+    .nav__list {
+      display: none; } }
 
 .nav__list-item {
   display: inline-block;
   list-style: none; }
+  @media screen and (max-width: 768px) {
+    .nav__list-item {
+      display: block;
+      background: #000; } }
 
 .nav__list-item a {
   display: block;
@@ -57,12 +99,33 @@ html {
   .nav__list-item a:hover, .nav__list-item a:focus, .nav__list-item a:active {
     color: #EB3B3B;
     transition: all 0.2s linear; }
+  @media screen and (max-width: 768px) {
+    .nav__list-item a {
+      height: auto;
+      padding: 25px; }
+      .nav__list-item a:hover, .nav__list-item a:focus, .nav__list-item a:active {
+        background: #fff;
+        color: #000; } }
 
 .nav--fixed-top {
   position: fixed;
   top: 0;
   left: 0;
   right: 0; }
+
+/**
+ * Mobile off-canvas nav
+ */
+.hamburger__icon {
+  font-size: 2rem;
+  color: #fff;
+  height: 100px;
+  line-height: 50px;
+  padding: 25px;
+  cursor: pointer; }
+
+#off-canvas-toggle:checked ~ .nav__list {
+  display: block; }
 
 .landing-section {
   background-color: #000;
@@ -73,9 +136,15 @@ html {
 
 .about-section {
   padding: 2rem 0;
+  padding-top: calc(2rem + 50px);
   background: #2BBF9B;
   color: #fff;
   font-size: 1.5rem; }
+
+.projects-section {
+  padding: 2rem 0;
+  background: #ccc;
+  height: 1000px; }
 
 .profile {
   position: absolute;

@@ -4,6 +4,7 @@
     <title>Mark Gibbons | Bristol-based web developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -15,37 +16,50 @@
     </div>
 </section>
 
-<nav id="main-nav" class="nav">
-    <a href="#" class="nav__home-link">Mark Gibbons</a>
-    <ul class="nav__list">
-        <li class="nav__list-item">
-            <a href="#">About Me</a>
-        </li>
-        <li class="nav__list-item">
-            <a href="#">Projects</a>
-        </li>
-        <li class="nav__list-item">
-            <a href="#">Get In Touch</a>
-        </li>
-    </ul>
-</nav>
+<div style="position:relative;">
+    <nav id="main-nav" class="nav">
+        <a href="#" class="nav__home-link">Mark Gibbons</a>
 
-<section id="about-section" class="about-section">
-    <div class="container">
-        <h2 class="section-header">About Me</h2>
-        <p>
-            I am a full-stack web developer who has been working in industry since January 2015. I am currently building enterprise level web applications in PHP and Javascript, primarily using Symfony and Backbone/Marionette. While I do both and front- and back-end work, my real passion and focus is for working on the front-end developing rich, dynamic user interfaces.
-        </p>
-        <p>
-            I am always excited to learn new languages frameworks and patterns. At the moment I am really loving Vue JS and their Flux-like architecture, Vuex. I am also enjoying re-acquainting myself with Python, after an almost 2 year break.
-        </p>
-        <p>
-            [Some stuff about my interests here...]
-        </p>
-    </div>
+        <input type="checkbox" id="off-canvas-toggle" style="display:none;">
+        <label for="off-canvas-toggle">
+            <span class="mobile-only pull-right hamburger">
+                <span class="octicon octicon-three-bars hamburger__icon"></span>
+            </span>
+        </label>
+        
+        <ul class="nav__list desktop-only">
+            <li class="nav__list-item">
+                <a href="#">About Me</a>
+            </li>
+            <li class="nav__list-item">
+                <a href="#">Projects</a>
+            </li>
+            <li class="nav__list-item">
+                <a href="#">Get In Touch</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="about-section" class="about-section">
+        <div class="container">
+            <h2 class="section-header">About Me</h2>
+            <p>
+                I am a full-stack web developer who has been working in industry since January 2015. I am currently building enterprise level web applications in PHP and Javascript, primarily using Symfony and Backbone/Marionette. While I do both and front- and back-end work, my real passion and focus is for working on the front-end developing rich, dynamic user interfaces.
+            </p>
+            <p>
+                I am always excited to learn new languages, frameworks and patterns. At the moment I am really loving Vue JS and their Flux-like architecture, Vuex. I am also enjoying re-acquainting myself with Python, after an almost 2 year break.
+            </p>
+            <p>
+                Outside of work I like to engage in various active pursuits - mainly cycling, but I have been known to dabble in climbing, running and swimming too. I also enjoy books and films - as I am writing this I am currently reading <em>SPQR</em> by Mary Beard and the last film I watched was <a href="https://www.rottentomatoes.com/m/wiener_dog/" target="_blank">Wiener-Dog</a>.
+            </p>
+        </div>
+    </section>
+</div>
+
+
+<section id="projects-section" class="projects-section">
+    <h2 class="section-header">Projects</h2>
 </section>
-
-<section id="projects-section" class="projects-section"></section>
 
 <script src="main.js"></script>
 

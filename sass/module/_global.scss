@@ -9,3 +9,30 @@ html {
         font-size: 32px;
     }
 }
+
+/**
+ * Links
+ */
+a {
+    color: inherit;
+}
+
+.mobile-only {
+    display: none;
+    @media screen and (max-width: 768px) {
+        display: initial;
+    }
+}
+
+.desktop-only {
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.pull-right {
+    float: right;
+}
+.pull-left {
+    float: left;
+}
