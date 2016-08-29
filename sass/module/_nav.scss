@@ -1,0 +1,46 @@
+$nav-height: 50px;
+$nav-height-mobile: 100px;
+
+.nav {
+    background: #000;
+}
+.nav__home-link {
+    display: inline-block;
+    height: $nav-height;
+    padding: 15px;
+    color: #eee;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 20px;
+    margin-right: 20px;
+}
+.nav__list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.nav__list-item {
+    display: inline-block;
+    list-style: none;
+}
+.nav__list-item a {
+    display: block;
+    height: 50px;
+    padding: 15px;
+    line-height: 20px;
+    color: #ddd;
+    text-decoration: none;
+    &:hover, &:focus, &:active {
+        color: #EB3B3B;
+        transition: all 0.2s linear;
+        // border-bottom: 5px solid #fff;
+        // padding-bottom: 10px;
+    }
+}
+.nav--fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}

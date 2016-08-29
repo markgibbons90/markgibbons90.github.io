@@ -4,7 +4,8 @@
   "description": "My personal website",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass-build": "node-sass -r sass -o .",
+    "sass-watch": "node-sass -r -w sass -o ."
   },
   "repository": {
     "type": "git",

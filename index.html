@@ -8,29 +8,44 @@
 </head>
 <body>
 
-<div id="landing-page">
-    <div class="profile-block">
-        <div class="profile-pic"></div>
-        <div class="profile-text">Mark Gibbons <b>Web Developer</b></div>
+<section id="landing-section" class="landing-section">
+    <div class="profile">
+        <div class="profile__picture"></div>
+        <div class="profile__text">Mark Gibbons <b>Web Developer</b></div>
     </div>
-</div>
+</section>
 
-<nav id="main-nav" class="inline-nav">
-    <a href="#" class="nav-home-link">Mark Gibbons</a>
-    <ul class="inline-nav-list">
-        <li class="inline-nav-list-item">
+<nav id="main-nav" class="nav">
+    <a href="#" class="nav__home-link">Mark Gibbons</a>
+    <ul class="nav__list">
+        <li class="nav__list-item">
             <a href="#">About Me</a>
         </li>
-        <li class="inline-nav-list-item">
+        <li class="nav__list-item">
             <a href="#">Projects</a>
         </li>
-        <li class="inline-nav-list-item">
+        <li class="nav__list-item">
             <a href="#">Get In Touch</a>
         </li>
     </ul>
 </nav>
 
-<div id="about-page"></div>
+<section id="about-section" class="about-section">
+    <div class="container">
+        <h2 class="section-header">About Me</h2>
+        <p>
+            I am a full-stack web developer who has been working in industry since January 2015. I am currently building enterprise level web applications in PHP and Javascript, primarily using Symfony and Backbone/Marionette. While I do both and front- and back-end work, my real passion and focus is for working on the front-end developing rich, dynamic user interfaces.
+        </p>
+        <p>
+            I am always excited to learn new languages frameworks and patterns. At the moment I am really loving Vue JS and their Flux-like architecture, Vuex. I am also enjoying re-acquainting myself with Python, after an almost 2 year break.
+        </p>
+        <p>
+            [Some stuff about my interests here...]
+        </p>
+    </div>
+</section>
+
+<section id="projects-section" class="projects-section"></section>
 
 <script src="main.js"></script>
 

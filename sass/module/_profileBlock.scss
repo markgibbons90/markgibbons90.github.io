@@ -1,0 +1,24 @@
+.profile {
+    position: absolute;
+    top: calc(50% - 100px);
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.profile__picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url("/img/profilepic.jpg");
+    background-size: cover;
+    margin: 0 auto;
+}
+.profile__text {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #eee;
+    border-radius: 4px;
+    font-size: 1.2rem;
+}

@@ -14,7 +14,7 @@
         // This should prevent weird jumping due to URL bars on mobile devices.
         if (window.scrollY === 0) {
             var windowHeight = window.innerHeight;
-            document.getElementById('landing-page').style.height = windowHeight;
+            document.getElementById('landing-section').style.height = windowHeight;
         }
     };
 
