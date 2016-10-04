@@ -8,11 +8,8 @@ html {
   box-sizing: border-box; }
 
 html {
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px; }
-  @media screen and (max-width: 768px) {
-    html {
-      font-size: 32px; } }
 
 /**
  * Links
@@ -20,6 +17,9 @@ html {
 a {
   color: inherit; }
 
+/**
+ * Some helpers
+ */
 .mobile-only {
   display: none; }
   @media screen and (max-width: 768px) {
@@ -46,6 +46,54 @@ a {
     content: "";
     display: block; }
 
+.col--3 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .col--3:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    .col--3 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .col--3:last-child {
+        margin-right: 0; } }
+
+.col--4 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .col--4:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    .col--4 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .col--4:last-child {
+        margin-right: 0; } }
+
+.col--6 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .col--6:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    .col--6 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .col--6:last-child {
+        margin-right: 0; } }
+
 .nav {
   background: #000;
   position: absolute;
@@ -53,9 +101,6 @@ a {
   left: 0;
   right: 0;
   height: 50px; }
-  @media screen and (max-width: 768px) {
-    .nav {
-      height: 100px; } }
 
 .nav__home-link {
   display: inline-block;
@@ -67,11 +112,6 @@ a {
   font-size: 1.2rem;
   line-height: 20px;
   margin-right: 20px; }
-  @media screen and (max-width: 768px) {
-    .nav__home-link {
-      height: 100px;
-      line-height: 50px;
-      padding: 25px; } }
 
 .nav__list {
   display: inline-block;
@@ -121,7 +161,7 @@ a {
   color: #fff;
   height: 100px;
   line-height: 50px;
-  padding: 25px;
+  padding: 0 1rem;
   cursor: pointer; }
 
 #off-canvas-toggle:checked ~ .nav__list {
@@ -139,12 +179,17 @@ a {
   padding-top: calc(2rem + 50px);
   background: #2BBF9B;
   color: #fff;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  font-weight: 300; }
 
 .projects-section {
   padding: 2rem 0;
-  background: #ccc;
-  height: 1000px; }
+  background: #222;
+  color: #fff;
+  font-weight: 300; }
+
+.project-container {
+  margin-top: 5rem; }
 
 .profile {
   position: absolute;
@@ -173,8 +218,28 @@ a {
 /**
  * Headers
  */
+.header {
+  font-size: 1.5rem;
+  font-weight: normal; }
+
+.header--underline-pink {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ed1250; }
+
 .section-header {
   text-align: center;
-  font-size: 3.2rem;
+  font-size: 4.5rem;
   font-weight: normal;
-  margin: 1rem 0; }
+  margin: 2rem 0; }
+
+/**
+ * Test transforms
+ */
+.center {
+  text-align: center; }
+
+.large-text {
+  font-size: 1.25rem; }
+
+.small-text {
+  font-size: 0.75rem; }

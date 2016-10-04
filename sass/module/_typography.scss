@@ -1,9 +1,30 @@
 /**
  * Headers
  */
+.header {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+.header--underline-pink {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ed1250;
+}
 .section-header {
     text-align: center;
-    font-size: 3.2rem;
+    font-size: 4.5rem;
     font-weight: normal;
-    margin: 1rem 0;
+    margin: 2rem 0;
+}
+
+/**
+ * Test transforms
+ */
+.center {
+    text-align: center;
+}
+.large-text {
+    font-size: 1.25rem;
+}
+.small-text {
+    font-size: 0.75rem;
 }

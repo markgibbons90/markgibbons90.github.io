@@ -11,7 +11,7 @@ $nav-height-mobile: 100px;
     height: $nav-height;
     // On mobile
     @media screen and (max-width: 768px) {
-        height: $nav-height-mobile;
+        // height: $nav-height-mobile;
     }
 }
 
@@ -27,9 +27,9 @@ $nav-height-mobile: 100px;
     line-height: 20px;
     margin-right: 20px;
     @media screen and (max-width: 768px) {
-        height: 100px;
-        line-height: 50px;
-        padding: 25px;
+        // height: 100px;
+        // line-height: 50px;
+        // padding: 25px;
     }
 }
 
@@ -95,7 +95,7 @@ $nav-height-mobile: 100px;
     color: #fff;
     height: 100px;
     line-height: 50px;
-    padding: 25px;
+    padding: 0 1rem;
     cursor: pointer;
 }
 
